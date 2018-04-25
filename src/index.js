@@ -1,6 +1,8 @@
+import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
 import Styles from './index.less';
 import img from 'img/app.png';
+console.log(window.react);
 class App extends React.Component{
   constructor(props){
     super(props)
@@ -12,7 +14,7 @@ class App extends React.Component{
     return (
       <div>
         <img src={img} />
-        <div>asdasd</div>
+        <div>asdasdasdasd</div>
       </div>
     )
   }
