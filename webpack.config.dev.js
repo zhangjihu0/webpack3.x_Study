@@ -6,7 +6,7 @@ module.exports = merge(common, {
     contentBase: './public',
     host:'localhost',
     compress:true,//压缩
-    port:8080,
+    port:8089,
     inline:false,
     historyApiFallback:true
   }

@@ -1,10 +1,7 @@
 const path = require('path');
-
-
 const HtmlWebpackPlugin  =  require('html-webpack-plugin');
 const EXtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const lessExtract = new EXtractTextWebpackPlugin('less.css')
-
 const Webpack = require('webpack');
 
 module.exports = {
@@ -26,11 +23,12 @@ module.exports = {
       {//style-loader将css插入到页面的style,css-loader是处理css文件中的url()
         test:/\.less$/,//loader执行顺序从右向左
         use:lessExtract.extract({
-          use:[
-            {loader:'css-loader',options:{minimize:true}},
+          fallback:"style-loader",
+          use:[        
+            {loader:'css-loader',options:{modules: true,minimize:true}},
             'postcss-loader',
             'less-loader'
-          ]
+          ],
         }),
         include:path.join(__dirname,'/src'),
         exclude:path.join(__dirname,'node_modules/')

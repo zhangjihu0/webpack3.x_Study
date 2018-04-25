@@ -6,7 +6,7 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --open --config ./webpack.config.dev.js",
     "build": "cross-env NODE_ENV=production webpack --progress --colors --config ./webpack.config.pro.js",
     "dll": "cross-env NODE_ENV=production webpack --progress --colors  --config ./vendor.webpack.config.js",
-    "detail":"cross-env NODE_ENV=production webpack --profile --json > stats.json --config ./webpack.config.pro.js"
+    "detail": "cross-env NODE_ENV=production webpack --profile --json > stats.json --config ./webpack.config.pro.js"
   },
   "license": "MIT",
   "devDependencies": {
@@ -32,6 +32,7 @@
     "postcss-loader": "^2.1.4",
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0",
+    "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",
     "webpack": "3.8",
     "webpack-dev-server": "2.9.7",

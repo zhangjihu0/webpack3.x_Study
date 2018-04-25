@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
 import Styles from './index.less';
 import img from 'img/app.png';
-console.log(window.react);
+console.log(Styles.a);
 class App extends React.Component{
   constructor(props){
     super(props)
@@ -14,7 +14,7 @@ class App extends React.Component{
     return (
       <div>
         <img src={img} />
-        <div>asdasdasdasd</div>
+        <div className={Styles.a}>asdasdasdasd</div>
       </div>
     )
   }
